@@ -1,0 +1,82 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+import { Icon } from 'astro-icon/components';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+
+	<body class="bg-slate-200">
+		<div class="bg-white h-16 flex items-center">
+			<header class="flex justify-between container max-w-6xl mx-auto">
+				<h1>
+					<span class="font-bold text-blue-600">H.</span>
+					<span>Phone</span>
+				</h1>
+	
+				<menu class="flex items-center gap-5">
+					<div>
+						<a href="#" class="text-blue-600 border-b-2 border-b-blue-600 border-dotted">
+							Home 
+						</a>
+					</div>
+
+					<div>
+						<a href="#">
+							Shop  
+						</a>
+					</div>
+ 
+					<div>
+						<a href="#">
+							Product 
+						</a>
+					</div>
+
+					<div>
+						<a href="#">
+							Blog 
+						</a>
+					</div>
+
+					<div>
+						<a href="#">
+							Contact  
+						</a>
+					</div>
+				</menu>
+	
+				<div class="flex items-center justify-center gap-3">
+					<Icon class="size-5" name="mdi:shopping-cart-outline" />
+					<Icon class="size-5" name="mdi:search" />
+					<Icon class="size-5" name="mdi:user-outline" />
+	
+				</div>
+	
+			</header>
+		</div>
+
+		
+
+
+
+
+
+
+		<slot />
+	</body>
+</html>
+<style is:global>
+	
+</style>
